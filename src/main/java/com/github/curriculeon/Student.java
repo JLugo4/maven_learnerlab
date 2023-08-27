@@ -11,12 +11,11 @@ public class Student extends Person implements Learner{
     // Learner methods
     @Override
     public void learn(double numberOfHours) {
-
     }
 
     @Override
     public double getTotalStudyTime() {
-        return 0;
+        return totalStudyTime;
     }
     // Instance Variables
     double totalStudyTime;
