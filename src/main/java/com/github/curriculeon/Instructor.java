@@ -14,6 +14,6 @@ public class Instructor extends Person implements Teacher{
 
     @Override
     public void lecture(Learner[] learner, double numberOfHours) {
-
     }
+
 }

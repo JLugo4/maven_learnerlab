@@ -32,7 +32,10 @@ public class TestStudent {
         Assert.assertTrue(student instanceof Person);
     }
 
-//    @Test
+
+    // Revisit with Leon
+
+    //    @Test
 //    public void testLearn(){
 //        //Given
 //        Student student = new Student(10000, "Dean");
