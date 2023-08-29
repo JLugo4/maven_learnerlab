@@ -12,40 +12,41 @@ public class TestStudent {
     @Test
     public void testIsLearner(){
         //Given
-        Student student = new Student(10000, "Dean");
+        Student student = new Student(null, "Dean");
 
         //When
-
+        boolean isLearner = student instanceof Learner;
 
         //Then
-        Assert.assertTrue(student instanceof Learner);
+        Assert.assertTrue(isLearner);
     }
     @Test
     public void testIsPerson(){
         //Given
-        Student student = new Student(10000, "Dean");
+        Student student = new Student(null, "Dean");
 
         //When
-
+        boolean isPerson = student instanceof Person;
 
         //Then
-        Assert.assertTrue(student instanceof Person);
+        Assert.assertTrue(isPerson);
     }
 
 
     // Revisit with Leon
 
-    //    @Test
-//    public void testLearn(){
-//        //Given
-//        Student student = new Student(10000, "Dean");
-//
-//        //When
-//        student.learn(10.0);
-//        student.learn(8.0);
-//
-//        //Then
-//        double totalStudyTime = student.getTotalStudyTime();
-//        Assert.assertEquals(18.0, totalStudyTime);
-//    }
+        @Test
+    public void testLearn(){
+        //Given
+        Student student = new Student(null, "Dean");
+        double numberOfHours = 100.0;
+        double preStudyTime = student.getTotalStudyTime();
+        double expectedTotalStudyTime = preStudyTime + numberOfHours;
+
+        //When
+        student.learn(numberOfHours);
+
+        //Then
+        Assert.assertEquals(expectedTotalStudyTime, student.getTotalStudyTime(), 0.001);
+    }
 }

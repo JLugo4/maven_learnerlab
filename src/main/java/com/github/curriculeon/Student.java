@@ -2,23 +2,26 @@ package com.github.curriculeon;
 
 public class Student extends Person implements Learner{
 
+    // Instance Variable
+    private double totalStudyTime;
 
     // Constructor
-    public Student(long id, String name) {
+    public Student(Long id, String name) {
         super(id, name);
     }
 
     // Learner methods
     @Override
     public void learn(double numberOfHours) {
+        this.totalStudyTime += numberOfHours;
     }
 
     @Override
-    public double getTotalStudyTime() {
+    public Double getTotalStudyTime() {
         return totalStudyTime;
     }
-    // Instance Variables
-    double totalStudyTime;
+
+
 
     
 

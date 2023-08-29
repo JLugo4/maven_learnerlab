@@ -3,11 +3,11 @@ package com.github.curriculeon;
 public class Person {
 
     // Declaring Variables
-    final long id;
+    final Long id;
     String name;
 
     // Constructor
-    public Person(long id, String name){
+    public Person(Long id, String name){
         this.id = id;
         this.name = name;
     }
